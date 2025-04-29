@@ -4,7 +4,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/activity/')
+    fetch('https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/activity/?format=json')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);
