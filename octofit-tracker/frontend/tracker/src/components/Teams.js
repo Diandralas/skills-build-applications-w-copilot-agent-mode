@@ -5,7 +5,13 @@ function Teams() {
 
   useEffect(() => {
     fetch('https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/teams/?format=json')
-      .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })  
+    .then(response => response.json())
       .then(data => setTeams(data));
   }, []);
 
