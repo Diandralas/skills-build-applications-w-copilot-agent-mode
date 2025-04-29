@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
+const BASE_URL = process.env.REACT_APP_CODESPACE_URL || 'http://localhost:8000';
+
 function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/activity/?format=json')
-    .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })  
-    .then(response => response.json())
-      .then(data => setActivities(data));
+    fetch(`${BASE_URL}/api/activity/`)
+      .then(response => response.json())
+      .then(data => setActivities(data))
+      .catch(error => console.error('Error fetching activities:', error));
   }, []);
 
   return (

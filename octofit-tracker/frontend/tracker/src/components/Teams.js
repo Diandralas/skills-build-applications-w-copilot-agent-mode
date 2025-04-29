@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
+const BASE_URL = process.env.REACT_APP_CODESPACE_URL || 'http://localhost:8000';
+
+
 function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/teams/?format=json')
-    .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })  
-    .then(response => response.json())
-      .then(data => setTeams(data));
+    fetch(`${BASE_URL}/api/teams/`)
+      .then(response => response.json())
+      .then(data => {
+        setTeams(data);
+      })
+      .catch(error => console.error('Error fetching teams:', error));
   }, []);
 
   return (
