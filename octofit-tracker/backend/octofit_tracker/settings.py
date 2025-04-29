@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    '[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev',
+    'cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev',
 ]
 
 
