@@ -21,12 +21,12 @@ class Command(BaseCommand):
         team2 = Team.objects.create(name="Team Beta")
 
         # Populate Activities
-        Activity.objects.create(user_id=user1._id, activity_type="Running", duration=30)
-        Activity.objects.create(user_id=user2._id, activity_type="Cycling", duration=45)
+        Activity.objects.create(user_id=user1.id, activity_type="Running", duration=30)
+        Activity.objects.create(user_id=user2.id, activity_type="Cycling", duration=45)
 
         # Populate Leaderboard
-        Leaderboard.objects.create(user_id=user1._id, score=100)
-        Leaderboard.objects.create(user_id=user2._id, score=150)
+        Leaderboard.objects.create(user_id=user1.id, score=100)
+        Leaderboard.objects.create(user_id=user2.id, score=150)
 
         # Populate Workouts
         Workout.objects.create(name="Morning Cardio", description="A quick morning cardio session", duration=20)
