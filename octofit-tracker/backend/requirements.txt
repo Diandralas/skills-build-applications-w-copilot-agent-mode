@@ -3,3 +3,4 @@ flask-restful
 flask-sqlalchemy
 pymongo
 Django==4.1
+django-cors-headers
