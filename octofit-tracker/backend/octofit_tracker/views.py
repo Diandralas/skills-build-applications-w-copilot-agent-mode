@@ -7,11 +7,11 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 @api_view(['GET'])
 def api_root(request):
     return Response({
-        'users': '/users/',
-        'teams': '/teams/',
-        'activity': '/activity/',
-        'leaderboard': '/leaderboard/',
-        'workouts': '/workouts/',
+        'users': '/users/-8000.app.github.dev/',
+        'teams': '/teams/-8000.app.github.dev/',
+        'activity': '/activity/-8000.app.github.dev/',
+        'leaderboard': '/leaderboard/-8000.app.github.dev/',
+        'workouts': '/workouts/-8000.app.github.dev/',
     })
 
 class UserList(APIView):
