@@ -5,7 +5,7 @@ class Command(BaseCommand):
     help = 'Populate the database with test data'
 
     def handle(self, *args, **kwargs):
-        # Clear existing data
+        # Adding test data for the database
         User.objects.all().delete()
         Team.objects.all().delete()
         Activity.objects.all().delete()
