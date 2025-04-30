@@ -5,3 +5,5 @@ pymongo
 Django==4.1
 django-cors-headers
 djongo
+python-dotenv
+python-dotenv
