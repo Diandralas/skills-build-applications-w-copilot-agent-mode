@@ -16,7 +16,7 @@ function App() {
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img src="/logo-small.png" alt="OctoFit Logo" />
-            OctoFit Tracker
+            OctoFit Tracker App
           </Link>
           <ul className="navbar-nav">
             <li className="nav-item">

@@ -7,7 +7,7 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    base_url = os.getenv('CODESPACE_URL', 'http://localhost:8000')
+    base_url = 'https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/'
     return Response({
         'users': base_url + '/api/users/',
         'teams': base_url + '/api/teams/',
