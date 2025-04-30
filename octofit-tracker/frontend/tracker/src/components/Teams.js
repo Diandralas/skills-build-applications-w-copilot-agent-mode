@@ -18,11 +18,22 @@ function Teams() {
   return (
     <div>
       <h1>Teams</h1>
-      <ul>
-        {teams.map(team => (
-          <li key={team.id}>{team.name}</li>
-        ))}
-      </ul>
+      <table className="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Team Name</th>
+            <th scope="col">Members</th>
+          </tr>
+        </thead>
+        <tbody>
+          {teams.map(team => (
+            <tr key={team._id}>
+              <td>{team.name}</td>
+              <td>{team.members && Array.isArray(team.members) ? team.members.map(member => member.username).join(', ') : 'No members'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

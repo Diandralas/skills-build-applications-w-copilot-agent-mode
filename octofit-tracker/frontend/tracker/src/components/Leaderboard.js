@@ -16,11 +16,22 @@ function Leaderboard() {
   return (
     <div>
       <h1>Leaderboard</h1>
-      <ul>
-        {leaderboard.map(entry => (
-          <li key={entry.id}>{entry.name}: {entry.score}</li>
-        ))}
-      </ul>
+      <table className="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {leaderboard.map(entry => (
+            <tr key={entry._id}>
+              <td>{entry.user.username}</td>
+              <td>{entry.score}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
