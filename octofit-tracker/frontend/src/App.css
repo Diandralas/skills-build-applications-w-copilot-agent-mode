@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General background and text styling */
+body {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Navigation menu styling */
+.navbar {
+  background-color: #007bff;
+}
+
+.navbar .navbar-brand {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+  color: #d4d4d4;
+}
+
+/* Table styling */
+.table {
+  background-color: #ffffff;
+}
+
+.table thead {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #0056b3;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #003f7f;
+}
+
+/* Heading styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #007bff;
+}
+
+/* Link styling */
+a {
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* Logo styling */
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Favicon styling */
+.favicon {
+  display: none; /* Favicon is handled by the HTML <head> */
+}
