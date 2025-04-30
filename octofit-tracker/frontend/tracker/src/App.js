@@ -8,7 +8,6 @@ import Workouts from './components/Workouts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-const BASE_URL = process.env.REACT_APP_CODESPACE_URL || 'http://localhost:8000';
 
 function App() {
   return (
