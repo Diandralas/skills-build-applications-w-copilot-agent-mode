@@ -1,3 +1,4 @@
+import os
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -5,13 +6,14 @@ from .models import User, Team, Activity, Leaderboard, Workout
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 
 @api_view(['GET'])
-def api_root(request):
+def api_root(request, format=None):
+    base_url = os.getenv('CODESPACE_URL', 'http://localhost:8000')
     return Response({
-        'users': '/users/-8000.app.github.dev/',
-        'teams': '/teams/-8000.app.github.dev/',
-        'activity': '/activity/-8000.app.github.dev/',
-        'leaderboard': '/leaderboard/-8000.app.github.dev/',
-        'workouts': '/workouts/-8000.app.github.dev/',
+        'users': base_url + '/api/users/',
+        'teams': base_url + '/api/teams/',
+        'activities': base_url + '/api/activities/',
+        'leaderboard': base_url + '/api/leaderboard/',
+        'workouts': base_url + '/api/workouts/'
     })
 
 class UserList(APIView):

@@ -6,6 +6,9 @@ import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+const BASE_URL = process.env.REACT_APP_CODESPACE_URL || 'http://localhost:8000';
 
 function App() {
   return (
@@ -35,6 +38,7 @@ function App() {
           </ul>
         </div>
       </nav>
+      <div className="mt-4">
       <Routes>
         <Route path="/activities" element={<Activities />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
@@ -42,6 +46,7 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/workouts" element={<Workouts />} />
       </Routes>
+      </div>
     </Router>
   );
 }

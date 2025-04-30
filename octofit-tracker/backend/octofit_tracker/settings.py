@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 from corsheaders.defaults import default_headers
 
@@ -26,11 +27,7 @@ SECRET_KEY = "django-insecure-l^!0io7@1qh)gx@ih)vmw^+0psrtxb+4_u!fr=x0xk$h#=28b!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'localhost',
-    'cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev',
-]
-
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 # Application definition
 
