@@ -4,7 +4,8 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/teams/')
+    const API_SUFFIX = '/api/teams/';
+    fetch(`https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev${API_SUFFIX}`)
       .then(response => response.json())
       .then(data => {
         setTeams(data);
