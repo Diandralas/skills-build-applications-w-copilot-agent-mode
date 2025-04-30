@@ -4,8 +4,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const API_SUFFIX = '/api/users/';
-    fetch(`https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev${API_SUFFIX}`)
+    fetch(`https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/users/`)
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching users:', error));

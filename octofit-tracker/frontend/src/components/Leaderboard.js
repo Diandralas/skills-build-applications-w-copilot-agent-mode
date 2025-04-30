@@ -4,8 +4,7 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    const API_SUFFIX = '/api/leaderboard/';
-    fetch(`https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev${API_SUFFIX}`)
+    fetch(`https://cautious-dollop-p74rqj7grxvh967j-8000.app.github.dev/api/leaderboard/`)
       .then(response => response.json())
       .then(data => setLeaderboard(data))
       .catch(error => console.error('Error fetching leaderboard:', error));
